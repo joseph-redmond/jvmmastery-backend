@@ -1,6 +1,6 @@
 package com.josephredmond.jvmmastery.services.episode.functions;
 
-import com.josephredmond.jvmmastery.repositories.EpisodeRepository;
+import com.josephredmond.jvmmastery.repositories.episode.EpisodeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

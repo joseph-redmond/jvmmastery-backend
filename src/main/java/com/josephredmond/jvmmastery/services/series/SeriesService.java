@@ -1,8 +1,6 @@
 package com.josephredmond.jvmmastery.services.series;
 
-import com.josephredmond.jvmmastery.dto.EpisodeDTO;
-import com.josephredmond.jvmmastery.dto.SeriesDTO;
-import org.springframework.stereotype.Service;
+import com.josephredmond.jvmmastery.dto.series.SeriesDTO;
 
 import java.util.List;
 import java.util.Optional;

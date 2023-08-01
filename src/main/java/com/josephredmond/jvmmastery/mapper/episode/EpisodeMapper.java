@@ -1,7 +1,7 @@
-package com.josephredmond.jvmmastery.mapper;
+package com.josephredmond.jvmmastery.mapper.episode;
 
-import com.josephredmond.jvmmastery.domain.Episode;
-import com.josephredmond.jvmmastery.dto.EpisodeDTO;
+import com.josephredmond.jvmmastery.domain.episode.Episode;
+import com.josephredmond.jvmmastery.dto.episode.EpisodeDTO;
 import org.mapstruct.Mapper;
 
 @Mapper

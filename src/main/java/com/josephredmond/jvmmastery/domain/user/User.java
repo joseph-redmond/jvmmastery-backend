@@ -1,4 +1,4 @@
-package com.josephredmond.jvmmastery.domain;
+package com.josephredmond.jvmmastery.domain.user;
 
 import jakarta.persistence.*;
 import lombok.*;

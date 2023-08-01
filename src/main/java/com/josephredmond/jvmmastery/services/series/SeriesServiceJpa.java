@@ -1,8 +1,9 @@
 package com.josephredmond.jvmmastery.services.series;
 
-import com.josephredmond.jvmmastery.dto.SeriesDTO;
+import com.josephredmond.jvmmastery.dto.series.SeriesDTO;
 import com.josephredmond.jvmmastery.services.series.functions.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Primary
 public class SeriesServiceJpa implements SeriesService {
     private final FindSeriesById findSeriesById;
     private final FindAllSeries findAllSeries;
@@ -18,6 +20,7 @@ public class SeriesServiceJpa implements SeriesService {
     private final DeleteSeriesById deleteSeriesById;
     private final UpdateSeriesById updateSeriesById;
     private final PatchSeriesById patchSeriesById;
+
     @Override
     public Optional<SeriesDTO> findById(UUID id) {
         return findSeriesById.apply(id);

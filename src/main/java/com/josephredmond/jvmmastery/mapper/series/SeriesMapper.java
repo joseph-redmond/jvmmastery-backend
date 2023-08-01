@@ -1,7 +1,7 @@
-package com.josephredmond.jvmmastery.mapper;
+package com.josephredmond.jvmmastery.mapper.series;
 
-import com.josephredmond.jvmmastery.domain.Series;
-import com.josephredmond.jvmmastery.dto.SeriesDTO;
+import com.josephredmond.jvmmastery.domain.series.Series;
+import com.josephredmond.jvmmastery.dto.series.SeriesDTO;
 import org.mapstruct.Mapper;
 
 @Mapper

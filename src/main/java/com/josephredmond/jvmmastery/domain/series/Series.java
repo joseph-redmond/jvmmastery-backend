@@ -1,5 +1,6 @@
-package com.josephredmond.jvmmastery.domain;
+package com.josephredmond.jvmmastery.domain.series;
 
+import com.josephredmond.jvmmastery.domain.episode.Episode;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.JdbcTypeCode;

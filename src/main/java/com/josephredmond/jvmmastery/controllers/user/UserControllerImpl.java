@@ -1,6 +1,6 @@
-package com.josephredmond.jvmmastery.controllers;
+package com.josephredmond.jvmmastery.controllers.user;
 
-import com.josephredmond.jvmmastery.dto.UserDTO;
+import com.josephredmond.jvmmastery.dto.user.UserDTO;
 import com.josephredmond.jvmmastery.services.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

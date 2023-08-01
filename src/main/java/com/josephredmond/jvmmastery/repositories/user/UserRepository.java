@@ -1,6 +1,6 @@
-package com.josephredmond.jvmmastery.repositories;
+package com.josephredmond.jvmmastery.repositories.user;
 
-import com.josephredmond.jvmmastery.domain.User;
+import com.josephredmond.jvmmastery.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

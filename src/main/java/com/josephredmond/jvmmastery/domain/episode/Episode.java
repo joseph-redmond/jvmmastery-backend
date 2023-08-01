@@ -1,7 +1,7 @@
-package com.josephredmond.jvmmastery.domain;
+package com.josephredmond.jvmmastery.domain.episode;
 
+import com.josephredmond.jvmmastery.domain.series.Series;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;

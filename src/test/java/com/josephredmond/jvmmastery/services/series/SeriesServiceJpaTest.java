@@ -1,15 +1,19 @@
 package com.josephredmond.jvmmastery.services.series;
 
-import com.josephredmond.jvmmastery.domain.Series;
-import com.josephredmond.jvmmastery.dto.SeriesDTO;
-import com.josephredmond.jvmmastery.mapper.SeriesMapper;
-import com.josephredmond.jvmmastery.repositories.SeriesRepository;
+import com.josephredmond.jvmmastery.bootstrap.SeriesBootstrap;
+import com.josephredmond.jvmmastery.domain.series.Series;
+import com.josephredmond.jvmmastery.dto.series.SeriesDTO;
+import com.josephredmond.jvmmastery.mapper.series.SeriesMapper;
+import com.josephredmond.jvmmastery.mapper.series.SeriesMapperImpl;
+import com.josephredmond.jvmmastery.repositories.series.SeriesRepository;
+import com.josephredmond.jvmmastery.services.series.functions.*;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.context.annotation.Import;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -18,8 +22,19 @@ import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+@DataJpaTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Import({
+        SeriesServiceJpa.class,
+        SeriesBootstrap.class,
+        FindSeriesById.class,
+        FindAllSeries.class,
+        SaveSeries.class,
+        UpdateSeriesById.class,
+        PatchSeriesById.class,
+        DeleteSeriesById.class,
+        SeriesMapperImpl.class
+})
 class SeriesServiceJpaTest {
     @Autowired
     private SeriesService seriesService;
@@ -117,6 +132,7 @@ class SeriesServiceJpaTest {
         Boolean result = seriesService.patchById(null, seriesDTO);
         assertFalse(result);
     }
+
     @Test
     @Order(4)
     void testSaveEpisode() {

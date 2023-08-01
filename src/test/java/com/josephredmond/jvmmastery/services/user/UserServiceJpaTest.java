@@ -1,10 +1,11 @@
 package com.josephredmond.jvmmastery.services.user;
 
-import com.josephredmond.jvmmastery.bootstrap.DataBootstrap;
-import com.josephredmond.jvmmastery.domain.User;
-import com.josephredmond.jvmmastery.dto.UserDTO;
-import com.josephredmond.jvmmastery.mapper.UserMapperImpl;
-import com.josephredmond.jvmmastery.repositories.UserRepository;
+import com.josephredmond.jvmmastery.bootstrap.UserBootstrap;
+import com.josephredmond.jvmmastery.domain.user.User;
+import com.josephredmond.jvmmastery.dto.user.UserDTO;
+import com.josephredmond.jvmmastery.mapper.user.UserMapperImpl;
+import com.josephredmond.jvmmastery.repositories.user.UserRepository;
+import com.josephredmond.jvmmastery.services.user.functions.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -16,7 +17,18 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
-@Import({UserServiceJpa.class, DataBootstrap.class, UserMapperImpl.class})
+@Import({
+        UserServiceJpa.class,
+        UserBootstrap.class,
+        UserMapperImpl.class,
+        FindUserById.class,
+        FindAllUsers.class,
+        UpdateUserById.class,
+        SaveUser.class,
+        PatchUserById.class,
+        DeleteUserById.class
+
+})
 class UserServiceJpaTest {
 
     @Autowired

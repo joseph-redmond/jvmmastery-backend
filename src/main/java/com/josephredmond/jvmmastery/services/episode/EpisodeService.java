@@ -1,6 +1,6 @@
 package com.josephredmond.jvmmastery.services.episode;
 
-import com.josephredmond.jvmmastery.dto.EpisodeDTO;
+import com.josephredmond.jvmmastery.dto.episode.EpisodeDTO;
 
 import java.util.List;
 import java.util.Optional;

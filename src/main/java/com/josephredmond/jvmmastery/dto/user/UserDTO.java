@@ -1,4 +1,4 @@
-package com.josephredmond.jvmmastery.dto;
+package com.josephredmond.jvmmastery.dto.user;
 
 import lombok.*;
 

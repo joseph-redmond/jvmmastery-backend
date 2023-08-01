@@ -1,6 +1,6 @@
-package com.josephredmond.jvmmastery.repositories;
+package com.josephredmond.jvmmastery.repositories.series;
 
-import com.josephredmond.jvmmastery.domain.Series;
+import com.josephredmond.jvmmastery.domain.series.Series;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

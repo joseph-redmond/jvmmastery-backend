@@ -1,8 +1,8 @@
 package com.josephredmond.jvmmastery.services.series.functions;
 
-import com.josephredmond.jvmmastery.dto.SeriesDTO;
-import com.josephredmond.jvmmastery.mapper.SeriesMapper;
-import com.josephredmond.jvmmastery.repositories.SeriesRepository;
+import com.josephredmond.jvmmastery.dto.series.SeriesDTO;
+import com.josephredmond.jvmmastery.mapper.series.SeriesMapper;
+import com.josephredmond.jvmmastery.repositories.series.SeriesRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

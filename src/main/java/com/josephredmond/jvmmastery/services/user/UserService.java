@@ -1,6 +1,6 @@
 package com.josephredmond.jvmmastery.services.user;
 
-import com.josephredmond.jvmmastery.dto.UserDTO;
+import com.josephredmond.jvmmastery.dto.user.UserDTO;
 
 import java.util.List;
 import java.util.Optional;

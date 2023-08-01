@@ -1,16 +1,19 @@
 package com.josephredmond.jvmmastery.services.episode;
 
-import com.josephredmond.jvmmastery.domain.Episode;
-import com.josephredmond.jvmmastery.dto.EpisodeDTO;
-import com.josephredmond.jvmmastery.mapper.EpisodeMapper;
-import com.josephredmond.jvmmastery.repositories.EpisodeRepository;
-import com.josephredmond.jvmmastery.services.episode.EpisodeService;
+import com.josephredmond.jvmmastery.bootstrap.EpisodeBootstrap;
+import com.josephredmond.jvmmastery.domain.episode.Episode;
+import com.josephredmond.jvmmastery.dto.episode.EpisodeDTO;
+import com.josephredmond.jvmmastery.mapper.episode.EpisodeMapper;
+import com.josephredmond.jvmmastery.mapper.episode.EpisodeMapperImpl;
+import com.josephredmond.jvmmastery.repositories.episode.EpisodeRepository;
+import com.josephredmond.jvmmastery.services.episode.functions.*;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.context.annotation.Import;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -19,8 +22,20 @@ import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+@DataJpaTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Import({
+        EpisodeServiceJpa.class,
+        EpisodeBootstrap.class,
+        FindEpisodeById.class,
+        FindAllEpisodes.class,
+        SaveEpisode.class,
+        UpdateEpisodeById.class,
+        PatchEpisodeById.class,
+        DeleteEpisodeById.class,
+        EpisodeMapperImpl.class
+
+})
 class EpisodeServiceJpaTest {
     @Autowired
     private EpisodeService episodeService;
@@ -119,6 +134,7 @@ class EpisodeServiceJpaTest {
         Boolean result = episodeService.patchById(null, episodeDTO);
         assertFalse(result);
     }
+
     @Test
     @Order(4)
     void testSaveEpisode() {

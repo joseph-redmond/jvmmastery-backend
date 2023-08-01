@@ -1,8 +1,7 @@
 package com.josephredmond.jvmmastery.controllers.user;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.josephredmond.jvmmastery.controllers.UserController;
-import com.josephredmond.jvmmastery.dto.UserDTO;
+import com.josephredmond.jvmmastery.dto.user.UserDTO;
 import com.josephredmond.jvmmastery.services.user.UserService;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;

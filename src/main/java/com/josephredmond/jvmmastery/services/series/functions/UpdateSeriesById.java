@@ -1,9 +1,10 @@
 package com.josephredmond.jvmmastery.services.series.functions;
 
-import com.josephredmond.jvmmastery.domain.Series;
-import com.josephredmond.jvmmastery.dto.SeriesDTO;
-import com.josephredmond.jvmmastery.mapper.SeriesMapper;
-import com.josephredmond.jvmmastery.repositories.SeriesRepository;
+import com.josephredmond.jvmmastery.domain.series.Series;
+import com.josephredmond.jvmmastery.dto.series.SeriesDTO;
+import com.josephredmond.jvmmastery.mapper.series.SeriesMapper;
+import com.josephredmond.jvmmastery.repositories.series.SeriesRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +18,9 @@ import java.util.function.BiFunction;
 public class UpdateSeriesById implements BiFunction<UUID, SeriesDTO, Boolean> {
     private final SeriesRepository seriesRepository;
     private final SeriesMapper seriesMapper;
+
     @Override
+    @Transactional
     public Boolean apply(UUID id, SeriesDTO seriesDTO) {
         AtomicBoolean result = new AtomicBoolean(false);
         if (id == null || seriesDTO == null) return result.get();

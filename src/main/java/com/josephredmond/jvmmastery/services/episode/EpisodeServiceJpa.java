@@ -1,6 +1,6 @@
 package com.josephredmond.jvmmastery.services.episode;
 
-import com.josephredmond.jvmmastery.dto.EpisodeDTO;
+import com.josephredmond.jvmmastery.dto.episode.EpisodeDTO;
 import com.josephredmond.jvmmastery.services.episode.functions.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

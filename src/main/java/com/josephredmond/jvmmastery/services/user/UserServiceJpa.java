@@ -1,8 +1,6 @@
 package com.josephredmond.jvmmastery.services.user;
 
-import com.josephredmond.jvmmastery.dto.UserDTO;
-import com.josephredmond.jvmmastery.mapper.UserMapper;
-import com.josephredmond.jvmmastery.repositories.UserRepository;
+import com.josephredmond.jvmmastery.dto.user.UserDTO;
 import com.josephredmond.jvmmastery.services.user.functions.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,13 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 @Service
 @RequiredArgsConstructor
 public class UserServiceJpa implements UserService {
-    private final UserRepository userRepository;
-    private final UserMapper userMapper;
     private final FindUserById findUserById;
     private final FindAllUsers findAllUsers;
     private final SaveUser saveUser;
