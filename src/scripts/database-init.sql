@@ -1,0 +1,6 @@
+DROP DATABASE IF EXISTS `jvmm`;
+DROP USER IF EXISTS 'jvmm'@'%';
+
+CREATE DATABASE `jvmm` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER 'jvmm'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON `jvmm`.* TO 'jvmm'@'%';
